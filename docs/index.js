@@ -113,12 +113,6 @@ function readQueryString(){
     }
   }
   
-  function reloadWithViewportTag(){
-    
-  }
-  function reloadWithoutViewportTag(){
-    
-  }
   
   document.on('DOMContentLoaded', function(){
     getValues();
@@ -148,22 +142,23 @@ function readQueryString(){
     $('#toggleViewportTag').on('click', toggleViewportTag);
     
     
+    // toggle viewport metatag if no config on the QueryString
+    if( 'hardware' in queryMap ){ 
+      $('#reloadWithoutViewportTag').style.display = 'none';
+    }else{
+      $('#reloadWithViewportTag').style.display = 'none';
+      toggleViewportTag();
+    }
+    
     $('#reloadWithViewportTag').on('click', function(){
-      window.location.search = 'hardware';
-      window.location.realod();
-    });
-    $('#reloadWithoutViewportTag').on('click', function(){
       window.location.search = '';
       window.location.realod();
     });
+    $('#reloadWithoutViewportTag').on('click', function(){
+      window.location.search = 'hardware';
+      window.location.realod();
+    });
     
-    // toggle viewport metatag if no config on the QueryString
-    if( 'hardware' in queryMap ){ 
-      $('#reloadWithViewportTag').style.display = 'none';
-    }else{
-      $('#reloadWithoutViewportTag').style.display = 'none';
-      toggleViewportTag();
-    }
   });
   
 })();
