@@ -22,23 +22,6 @@
       </div>
     </div>
     
-      <!--  Observações sobre os navegadores  -->
-    <div class="obs">
-      <div class="semMetaViewport">
-          Esta página está <span class="verm">sem</span> a metatag <span class="azul">viewport</span>.
-      </div>
-      <div class="comMetaViewport">
-          Esta página está configurada com a metatag <span class="azul">viewport</span>: <span class="contentViewport verde"></span>.
-      </div>
-      <br/>
-      Na CSS, o tamanho de 96px é 1 inch (polegada). <br/>
-      1 polegada = 2,54 cm (25,4 mm). <br/>
-      96 px = 25,4 mm <br/>
-      1 px = 25,4 mm / 96 = 0,2645833... mm <br/>
-      16 px = 4,233... mm = 1 em <br/>
-      "em" é o tamanho padrão de fonte (na css, 16px)
-    </div>
-    
       <!--  Teste de tamanho de fontes (com fonte com serif)  -->
     <div class="texts test">
       <div class="testDesc">Font: Times New Roman</div>
@@ -109,7 +92,7 @@
       
       <table class="medidas">
         <tbody>
-          <tr>
+          <tr class="header">
             <td></td>
             <td>W (px)</td>
             <td>H (px)</td>
@@ -118,7 +101,7 @@
           </tr>
           
           <tr>
-            <td>window inner</td>
+            <td class="header">window inner</td>
             <td id="windowInnerWidth" class="azul">--</td>
             <td id="windowInnerHeight" class="azul">--</td>
             <td id="windowInnerWidthCm" class="verm">--</td>
@@ -126,7 +109,7 @@
           </tr>
           
           <tr>
-            <td>window outer</td>
+            <td class="header">window outer</td>
             <td id="windowOuterWidth" class="azul">--</td>
             <td id="windowOuterHeight" class="azul">--</td>
             <td id="windowOuterWidthCm" class="verm">--</td>
@@ -134,7 +117,7 @@
           </tr>
           
           <tr>
-            <td>screen</td>
+            <td class="header">screen</td>
             <td id="screenWidth" class="azul">--</td>
             <td id="screenHeight" class="azul">--</td>
             <td id="screenWidthCm" class="verm">--</td>
@@ -142,7 +125,7 @@
           </tr>
           
           <tr>
-            <td>screen available</td>
+            <td class="header">screen available</td>
             <td id="screenAvailWidth" class="azul">--</td>
             <td id="screenAvailHeight" class="azul">--</td>
             <td id="screenAvailWidthCm" class="verm">--</td>
@@ -155,12 +138,14 @@
         <tbody>
           
           <tr>
-            <td>device pixel ratio: </td>
+            <td class="header">device pixel ratio: </td>
             <td id="devicePixelRatio" class="verde">--</td>
-            <td></td>
+            <td>
+              Informa o quanto a página está ampliada em relação ao tamanho normal
+            </td>
           </tr>
           <tr>
-            <td>screen color depth: </td>
+            <td class="header">screen color depth: </td>
             <td id="colorDepth" class="verde">--</td>
             <td>
               Qtd de bits por pixel de imagem (de cor).
@@ -169,19 +154,19 @@
             </td>
           </tr>
           <tr>
-            <td>screen pixel depth: </td>
+            <td class="header">screen pixel depth: </td>
             <td id="pixelDepth" class="verde">--</td>
             <td>
               Antigo "colorDepth", use sempre "colorDepth" hoje.
             </td>
           </tr>
           <tr>
-            <td>screen orientation angle: </td>
+            <td class="header">screen orientation angle: </td>
             <td id="orientationAngle" class="verde">--</td>
             <td></td>
           </tr>
           <tr>
-            <td>screen orientation type: </td>
+            <td class="header">screen orientation type: </td>
             <td id="orientationType" class="verde">--</td>
             <td></td>
           </tr>
@@ -285,5 +270,27 @@
     </div>
       
     
+    <!--  Observações sobre os navegadores  -->
+    <div class="obs">
+      <div class="semMetaViewport">
+          Esta página está <span class="verm">sem</span> a metatag <span class="azul">viewport</span>.
+      </div>
+      <div class="comMetaViewport">
+          Esta página está configurada com a metatag <span class="azul">viewport</span>: <span class="contentViewport verde"></span>.
+      </div>
+      <br/>
+      Na CSS, o tamanho de 96px é 1 inch (polegada). <br/>
+      1 polegada = 2,54 cm (25,4 mm). <br/>
+      96 px = 25,4 mm <br/>
+      1 px = 25,4 mm / 96 = 0,2645833... mm <br/>
+      16 px = 4,233... mm = 1 em <br/>
+      "em" é o tamanho padrão de fonte (na css, 16px) <br/>
+      <br/>
+      <br/>
+      Escreva "?hardware" na url para recarregar a página sem o ajuste de tamanho. <br/>
+      <br/>
+      <button id="reloadWithViewportTag">Recarregar com ajuste de tamanho</button>
+      <button id="reloadWithoutViewportTag">Recarregar sem ajuste de tamanho</button>
+    </div>
   </body>
 </html>

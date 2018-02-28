@@ -138,6 +138,10 @@ body > div:last-of-type{
   width: 1cm;
 }
 
+.widthsAndHeights .header{
+  font-size: 10px;
+}
+
 .widthsAndHeights .medidas{
   margin-bottom: 30px;
 }
@@ -154,7 +158,6 @@ body > div:last-of-type{
 }
 .widthsAndHeights .infosDeTela td:nth-of-type(1){
   text-align: left;
-  font-size: 12px;
 }
 .widthsAndHeights .infosDeTela td:nth-of-type(2){
   text-align: right;
